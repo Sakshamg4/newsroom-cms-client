@@ -26,37 +26,6 @@ This system allows Writers to create and submit articles, Editors to review and 
 
 ---
 
-📁 Folder Structure
-
-newsroom-cms/
-│
-├── server/ # Backend (Node.js + Express)
-│ ├── controllers/ # Controllers (Auth, Articles, Users, Admin)
-│ ├── models/ # Mongoose Models (User, Article)
-│ ├── routes/ # API Routes (Auth, Articles, Users, Admin)
-│ ├── middleware/ # Auth & Role Middleware 
-│ ├── seed-test.js # Database seeder script
-│ ├── index.js # Express server entry point
-│ ├── package.json
-│ └── .env # Backend environment variables
-│
-└── client/ # Frontend (React + Vite)
-├── src/
-│ ├── pages/ # Dashboards (Writer, Editor, Admin, Reader)
-│ ├── Api/ # Axios setup
-│ ├── AuthContext/ # Global auth context
-│ ├── components/ # Shared components
-│ └── main.jsx
-├── public/
-├── vite.config.js
-├── package.json
-└── .env # Frontend environment variables
-
-yaml
-Copy code
-
----
-
 ## ⚙️ Installation & Setup
 
 ### 🧩 1. Clone the repository
