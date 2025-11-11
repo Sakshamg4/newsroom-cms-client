@@ -41,7 +41,7 @@ Create .env in /server
 ini
 Copy code
 BASE_URL=http://localhost:4000
-MONGO_URL=mongodb://localhost:27017/newsroom
+MONGO_URL='mongodb+srv://saksamguptabgmi4:saksamguptabgmi4@cluster0saksham.76ghyhz.mongodb.net/newsroom?appName=Cluster0Saksham/'
 JWT=enjoyingthebackendandlearing
 PORT=4000
 Run the backend
