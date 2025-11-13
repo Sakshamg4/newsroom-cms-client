@@ -100,13 +100,13 @@ export default function App() {
                 Reader
               </NavLink>
 
-              {(auth?.user?.role === 'Writer' || auth?.user?.role === 'Admin' || auth?.user?.role === 'Editor') && (
+              {(auth?.user?.role === 'Writer') && (
                 <NavLink to="/writer" onClick={() => setMobileOpen(false)} className={({ isActive }) => `${linkClass} ${isActive ? activeClass : 'text-gray-600'}`}>
                   Writer
                 </NavLink>
               )}
 
-              {(auth?.user?.role === 'Editor' || auth?.user?.role === 'Admin') && (
+              {(auth?.user?.role === 'Editor') && (
                 <NavLink to="/editor" onClick={() => setMobileOpen(false)} className={({ isActive }) => `${linkClass} ${isActive ? activeClass : 'text-gray-600'}`}>
                   Editor
                 </NavLink>
@@ -151,7 +151,7 @@ export default function App() {
           <Route
             path="/writer"
             element={
-              <ProtectedRoute allowed={['Writer', 'Admin', 'Editor']}>
+              <ProtectedRoute allowed={['Writer']}>
                 <WriterDashboard />
               </ProtectedRoute>
             }
@@ -160,7 +160,7 @@ export default function App() {
           <Route
             path="/editor"
             element={
-              <ProtectedRoute allowed={['Editor', 'Admin']}>
+              <ProtectedRoute allowed={['Editor']}>
                 <EditorDashboard />
               </ProtectedRoute>
             }
