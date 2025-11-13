@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
     return { token, user: user ? JSON.parse(user) : null };
   });
 
+
+
   useEffect(() => {
     if (auth?.token) setAuthHeader(auth.token);
   }, [auth]);

@@ -36,12 +36,12 @@ export default function App() {
                 <NavLink to="/reader" className={({ isActive }) => `${linkClass} ${isActive ? activeClass : 'text-gray-600'}`}>
                   Reader
                 </NavLink>
-                {(auth?.user?.role === 'Writer' || auth?.user?.role === 'Admin' || auth?.user?.role === 'Editor') && (
+                {(auth?.user?.role === 'Writer') && (
                   <NavLink to="/writer" className={({ isActive }) => `${linkClass} ${isActive ? activeClass : 'text-gray-600'}`}>
                     Writer
                   </NavLink>
                 )}
-                {(auth?.user?.role === 'Editor' || auth?.user?.role === 'Admin') && (
+                {(auth?.user?.role === 'Editor') && (
                   <NavLink to="/editor" className={({ isActive }) => `${linkClass} ${isActive ? activeClass : 'text-gray-600'}`}>
                     Editor
                   </NavLink>
